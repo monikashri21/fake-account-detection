@@ -2,6 +2,7 @@ let reportCount = 5;
 
 function checkAccount() {
 
+    let username = document.getElementById("username").value;
     let followers = document.getElementById("followers").value;
     let age = document.getElementById("age").value;
     let bio = document.getElementById("bio").value;
@@ -11,6 +12,11 @@ function checkAccount() {
     if (followers < 50) risk += 40;
     if (age < 3) risk += 30;
     if (bio.length < 10) risk += 30;
+
+    // NEW RULE (username check)
+    if (username.includes("fake") || username.includes("_")) {
+        risk += 30;
+    }
 
     let result = document.getElementById("result");
 
@@ -24,10 +30,10 @@ function checkAccount() {
         result.style.color = "red";
     } else {
         result.innerHTML = `
-        🟢 REAL ACCOUNT <br>
+        💗 REAL ACCOUNT <br>
         ✅ Safe to interact <br>
         📢 Report Count: ${reportCount}
         `;
-        result.style.color = "#00ff6a";
+        result.style.color = "hotpink";
     }
 }

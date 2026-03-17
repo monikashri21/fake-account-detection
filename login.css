@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial;
+}
+
+.login-box {
+    background: #0f0f0f;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px hotpink;
+}
+
+h1 {
+    color: hotpink;
+    font-family: cursive;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+    background: black;
+    border: 1px solid hotpink;
+    color: hotpink;
+}
+
+button {
+    width: 95%;
+    padding: 10px;
+    background: hotpink;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
